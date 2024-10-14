@@ -18,27 +18,27 @@ class LoginController extends Controller
 
     public function redirectTo() {
 
-        $role = Auth::User()->id_rol;
+        return 'home';
 
+        // $role = Auth::User()->id_rol;
         
-    
-        switch ($role) {
-            case '1':
-                return 'Dashboard';
-            break;
+        // switch ($role) {
+        //     case '1':
+        //         return 'Dashboard';
+        //     break;
 
-            case '2':
-                return 'Activos/0';
-            break;
+        //     case '2':
+        //         return 'Activos/0';
+        //     break;
 
-            case '3':
-                return 'Dashboard';
-            break;
+        //     case '3':
+        //         return 'Dashboard';
+        //     break;
 
-            default:
-                return '/';
-            break;
-        }
+        //     default:
+        //         return '/';
+        //     break;
+        // }
 
     }
 

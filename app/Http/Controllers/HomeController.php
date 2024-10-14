@@ -23,6 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.index');
+        $Headers = array(
+            'Header'    => 'Home Princip',
+            'subHeader' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates!',
+            'Path'      => array('Home'),
+        );
+
+        return view('Home.index', compact('Headers'));
+    }
+    public function Usuarios()
+    {
+        $Headers = array(
+            'Header'    => 'Tabla de Usuarios',
+            'subHeader' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates!',
+            'Path'      => array('Usuarios', 'Lista'),
+        );
+        return view('Usuario.Lista', compact('Headers'));
     }
 }
