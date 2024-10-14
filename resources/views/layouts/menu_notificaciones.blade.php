@@ -1,4 +1,4 @@
-<nav class="navbar header-navbar pcoded-header">
+
     <div class="navbar-wrapper">
 
         <div class="navbar-logo">
@@ -20,7 +20,7 @@
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
                             <i class="feather icon-bell"></i>
-                            <span class="badge bg-c-pink">5</span>
+                            <span class="badge bg-c-pink">3</span>
                         </div>
                         <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                             <li>
@@ -29,7 +29,7 @@
                             </li>
                             <li>
                                 <div class="media">
-                                    <img class="d-flex align-self-center img-radius" src="..\files\assets\images\avatar-4.jpg" alt="Generic placeholder image">
+                                    <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar.png')}}" alt="Generic placeholder image">
                                     <div class="media-body">
                                         <h5 class="notification-user">John Doe</h5>
                                         <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -39,7 +39,7 @@
                             </li>
                             <li>
                                 <div class="media">
-                                    <img class="d-flex align-self-center img-radius" src="..\files\assets\images\avatar-3.jpg" alt="Generic placeholder image">
+                                    <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar.png')}}" alt="Generic placeholder image">
                                     <div class="media-body">
                                         <h5 class="notification-user">Joseph William</h5>
                                         <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -49,7 +49,7 @@
                             </li>
                             <li>
                                 <div class="media">
-                                    <img class="d-flex align-self-center img-radius" src="..\files\assets\images\avatar-4.jpg" alt="Generic placeholder image">
+                                    <img class="d-flex align-self-center img-radius" src="{{ asset('assets/images/avatar.png')}}" alt="Generic placeholder image">
                                     <div class="media-body">
                                         <h5 class="notification-user">Sara Soudein</h5>
                                         <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -64,7 +64,7 @@
                 <li class="user-profile header-notification">
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="..\files\assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                            <img src="{{ asset('assets/images/avatar.png')}}" class="img-radius" alt="User-Profile-Image">
                             <span>Name User Here </span>
                             <i class="feather icon-chevron-down"></i>
                         </div>
@@ -81,4 +81,3 @@
             </ul>
         </div>
     </div>
-</nav>

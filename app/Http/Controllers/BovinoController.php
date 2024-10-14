@@ -4,40 +4,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class BovinoController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
+    public function getBovinos()
     {
         $Headers = array(
-            'Header'    => 'Pagina Principal',
+            'Header'    => 'Bovinos',
             'subHeader' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates!',
-            'Path'      => array('Home'),
+            'Path'      => array('Bovinos', 'Lista'),
         );
 
-        return view('Home.index', compact('Headers'));
+        return view('Bovinos.Tabla', compact('Headers'));
+        
     }
-    public function Usuarios()
+    public function getDetalles()
     {
         $Headers = array(
-            'Header'    => 'Tabla de Usuarios',
+            'Header'    => 'Bovinos Detalles',
             'subHeader' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, voluptates!',
-            'Path'      => array('Usuarios', 'Lista'),
+            'Path'      => array('Bovinos', 'Detalles'),
         );
-        return view('Usuario.Lista', compact('Headers'));
+
+        return view('Bovinos.DetallesBovinos', compact('Headers'));
+        
     }
 }

@@ -24,14 +24,19 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="text" name="email" class="form-control" placeholder="Your Email Address" value="admin@gmail.com">                                        
+                                        <div class="input-group input-group-success">
+                                            <span class="input-group-addon"><i class="icofont icofont-user"></i></span>
+                                            <input type="text" name="email" class="form-control form-control-lowercase" placeholder="Your Email Address" value="admin@gmail.com">
+                                        </div>                                        
                                         @error('email')
                                             <span class="form-bar">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" name="password" class="form-control"  placeholder="Password" value="123456">
-                                        <span class="form-bar"></span>
+                                        <div class="input-group input-group-success">
+                                            <span class="input-group-addon"><i class="icofont icofont-shield"></i></span>
+                                            <input type="password" name="password" class="form-control form-control-lowercase" placeholder="Password" value="123456">
+                                        </div>
                                         @error('password')
                                             <span class="form-bar">{{ $message }}</span>
                                         @enderror
@@ -41,24 +46,20 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2"></label>
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Acceder</button>
+                                            <button type="submit" class="btn btn-success btn-round btn-block m-b-20">Acceder</button>
                                         </div>
                                     </div>
                                 </form>
-
-                                
-                                    
-                                    
                                     <hr>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <p class="text-inverse text-left m-b-0">Desarrollado por.</p>
-                                            <p class="text-inverse text-left"><a href="/"><b class="f-w-600">IT GUMA</b></a></p>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <img src="{{ asset('files\assets\images\auth\Logo-small-bottom.png')}}" alt="small-logo.png">
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0">Desarrollado por.</p>
+                                        <p class="text-inverse text-left"><a href="/"><b class="f-w-600">IT GUMA</b></a></p>
                                     </div>
+                                    <div class="col-md-2">
+                                        <img src="{{ asset('files\assets\images\auth\Logo-small-bottom.png')}}" alt="small-logo.png">
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                        

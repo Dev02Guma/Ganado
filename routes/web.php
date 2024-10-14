@@ -22,3 +22,13 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Usuarios', 'HomeController@Usuarios')->name('Usuarios');
+
+
+Route::get('/Fincas', 'FincaController@getFincas')->name('Fincas');
+
+
+Route::get('/Lotes', 'LoteController@getLotes')->name('Lotes');
+
+
+Route::get('/Bovinos', 'BovinoController@getBovinos')->name('Bovinos');
+Route::get('/BovinosDetalles', 'BovinoController@getDetalles')->name('BovinosDetalles');
