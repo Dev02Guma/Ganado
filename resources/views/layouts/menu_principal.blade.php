@@ -8,39 +8,14 @@
                     <span class="pcoded-mtext">Inicio</span>
                 </a>
             </li>
-            <li class="pcoded-hasmenu">
-                <a href="javascript:void(0)">
-                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                    <span class="pcoded-mtext">Modulo 01</span>
+            <li class="">
+                <a href="subasta">
+                    <span class="pcoded-micon"><i class="feather icon-award"></i></span>
+                    <span class="pcoded-mtext">Subastas Online</span>
                 </a>
-                <ul class="pcoded-submenu">
-                    @for ($i = 1; $i <= 5; $i++)
-                        <li class="">
-                            <a href="home">
-                                <span class="pcoded-mtext">Sub Mod Opcion 0{{ $i }} </span>
-                            </a>
-                        </li>
-                    @endfor
-                    
-                </ul>
             </li>
-            <li class="pcoded-hasmenu">
-                <a href="javascript:void(0)">
-                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
-                    <span class="pcoded-mtext">Modulo 02</span>
-                </a>
-                <ul class="pcoded-submenu">
-                    @for ($i = 1; $i <= 5; $i++)
-                        <li class="">
-                            <a href="home">
-                                <span class="pcoded-mtext">Sub Mod Opcion 0{{ $i }} </span>
-                            </a>
-                        </li>
-                    @endfor
-                    
-                </ul>
-            </li>
-            <li class="pcoded-hasmenu {{ (request()->is('Fincas') || request()->is('Lotes') || request()->is('Bovinos') || request()->is('Usuarios') ) ? 'active pcoded-trigger' : '' }} ">
+           
+            <li class="pcoded-hasmenu {{ (request()->is('Fincas') || request()->is('Lotes') || request()->is('Bovinos') || request()->is('Usuarios') || request()->is('subasta-lista') ) ? 'active pcoded-trigger' : '' }} ">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
                     <span class="pcoded-mtext">Catalogos</span>
@@ -62,12 +37,24 @@
                             <span class="pcoded-mtext">Bovinos</span>
                         </a>
                     </li>
+                    <li class="{{ (request()->is('subasta-lista')) ? 'active' : '' }}">
+                        <a href="subasta-lista">
+                            <span class="pcoded-mtext">Subastas</span>
+                        </a>
+                    </li>
                     <li class="{{ (request()->is('Usuarios')) ? 'active' : '' }}">
                         <a href="Usuarios">
                             <span class="pcoded-mtext">Usuarios</span>
                         </a>
                     </li>
                 </ul>
+            </li>
+
+            <li class="">
+                <a href="{{route('logout')}}">
+                    <span class="pcoded-micon"><i class="feather icon-log-out"></i></span>
+                    <span class="pcoded-mtext">Salir</span>
+                </a>
             </li>
         </ul>
     </div>

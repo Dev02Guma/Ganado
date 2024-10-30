@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('Landing.Home');
+});
+
+Route::get('/login', function () {
     return view('auth.login');
 });
 
@@ -32,3 +36,10 @@ Route::get('/Lotes', 'LoteController@getLotes')->name('Lotes');
 
 Route::get('/Bovinos', 'BovinoController@getBovinos')->name('Bovinos');
 Route::get('/BovinosDetalles', 'BovinoController@getDetalles')->name('BovinosDetalles');
+
+
+
+Route::get('/subasta', 'SubastaController@ViewHome')->name('subasta');
+Route::get('/subasta-detalles', 'SubastaController@Detalles')->name('subasta-detalles');
+Route::get('/subasta-lista', 'SubastaController@Listas')->name('subasta-lista');
+ 

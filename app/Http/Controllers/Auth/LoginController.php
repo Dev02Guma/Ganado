@@ -18,27 +18,22 @@ class LoginController extends Controller
 
     public function redirectTo() {
 
-        return 'home';
+        $role = Auth::User()->rol_id;
 
-        // $role = Auth::User()->id_rol;
         
-        // switch ($role) {
-        //     case '1':
-        //         return 'Dashboard';
-        //     break;
+        switch ($role) {
+            case '1':
+                return 'home';
+            break;
 
-        //     case '2':
-        //         return 'Activos/0';
-        //     break;
+            case '2':
+                return 'subasta';
+            break;
 
-        //     case '3':
-        //         return 'Dashboard';
-        //     break;
-
-        //     default:
-        //         return '/';
-        //     break;
-        // }
+            default:
+                return '/';
+            break;
+        }
 
     }
 
@@ -81,8 +76,8 @@ class LoginController extends Controller
 
                 foreach($Info_usuario as $user)
                 {
-                    $request->session()->put('name_session', $user->nombre);
-                    // $request->session()->put('name_rol', $user->RolName->descripcion);
+                    $request->session()->put('name_session', $user->name);
+                    //$request->session()->put('name_rol', $user->RolName->descripcion);
                     // $request->session()->put('rol', $user->id_rol);
                     // $request->session()->put('Zona', $user->id_zona);
                 }
